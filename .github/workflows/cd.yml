@@ -1,8 +1,8 @@
-name: CI Pipeline
+name: CD Pipeline
 
 on:
   workflow_run:
-    workflows: ["CI build"]
+    workflows: ["CI Pipeline "]
     types:
       - completed
 
@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Pull Docker image
