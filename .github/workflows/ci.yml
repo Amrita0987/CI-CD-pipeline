@@ -19,6 +19,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build amrita576/cicd-pipeline .
+      run: docker build -t amrita576/cicd-pipeline .
     - name: Push to Dockerhub
       run: docker push amrita576/cicd-pipeline:latest
